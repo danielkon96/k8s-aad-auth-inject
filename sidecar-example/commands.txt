@@ -1,0 +1,7 @@
+kubectl run -i --rm --restart=Never busybox --image=busyacr.azurecr.io/busy/init:latest --image-pull-policy Always -- sh
+
+kubectl run -i --rm --restart=Never busybox --image=odise/busybox-curl -- sh -c "curl -i 10.244.0.122:80/get?query=param"
+
+kubectl run -i --rm --restart=Never busybox --image=odise/busybox-curl -- sh -c "curl -i -X POST -d 'body=parameters' 10.244.0.122:80/post"
+
+kubectl run -i --rm --restart=Never busybox --image=odise/busybox-curl -- sh -c "curl -i http://10.244.0.122:80/status/429"
