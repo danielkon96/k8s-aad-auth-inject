@@ -23,4 +23,4 @@ spec:
     image: busyacr.azurecr.io/busy/proxy:latest # use your own registry
     imagePullPolicy: Always
     ports:
-    - containerPort: 8000
+    - containerPort: 8000 
