@@ -7,7 +7,7 @@ metadata:
 spec:
   initContainers:
   - name: init-networking
-    image: t20acr.azurecr.io/busy/init:latest # use your own registry
+    image: t20acr.azurecr.io/init:latest # use your own registry
     imagePullPolicy: Always
     securityContext:
       capabilities:
@@ -20,7 +20,7 @@ spec:
     ports:
     - containerPort: 80
   - name: proxy
-    image: t20acr.azurecr.io/busy/proxy:latest # use your own registry
+    image: t20acr.azurecr.io/proxy:latest # use your own registry
     imagePullPolicy: Always
     ports:
     - containerPort: 8000
